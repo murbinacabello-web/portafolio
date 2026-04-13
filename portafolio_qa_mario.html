@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mario Urbina | QA Lead Portfolio</title>
+  <meta name="description" content="Portafolio profesional de Mario Urbina, QA Lead y Senior QA Consultant especializado en estrategia, ejecución y liderazgo en pruebas de software." />
+  <style>
+    :root{
+      --bg:#f4f7f8;
+      --surface:#ffffff;
+      --surface-2:#eef3f4;
+      --text:#1f2a30;
+      --muted:#5f6e75;
+      --primary:#2f5660;
+      --primary-2:#3c6e78;
+      --accent:#7b9489;
+      --line:#d9e2e5;
+      --shadow:0 12px 35px rgba(28, 50, 56, 0.08);
+      --radius:18px;
+      --radius-sm:12px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      background:linear-gradient(180deg,#f4f7f8 0%,#eef3f4 100%);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%}
+
+    .container{
+      width:min(var(--max), calc(100% - 2rem));
+      margin:0 auto;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(12px);
+      background:rgba(244,247,248,.84);
+      border-bottom:1px solid rgba(217,226,229,.85);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:1rem;
+      padding:1rem 0;
+    }
+
+    .brand{
+      font-weight:700;
+      letter-spacing:.2px;
+      color:var(--primary);
+    }
+
+    .nav-links{
+      display:flex;
+      gap:1rem;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .nav-links a{
+      color:var(--muted);
+      font-size:.95rem;
+      padding:.5rem .75rem;
+      border-radius:999px;
+      transition:.2s ease;
+    }
+
+    .nav-links a:hover{
+      background:var(--surface);
+      color:var(--primary);
+    }
+
+    .hero{
+      padding:4.5rem 0 3rem;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.25fr .9fr;
+      gap:2rem;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      padding:.45rem .8rem;
+      border-radius:999px;
+      background:rgba(123,148,137,.14);
+      color:var(--primary);
+      font-size:.88rem;
+      margin-bottom:1rem;
+    }
+
+    h1,h2,h3{
+      line-height:1.15;
+      margin:0 0 1rem;
+      letter-spacing:-.02em;
+    }
+
+    h1{
+      font-size:clamp(2.3rem, 5vw, 4.2rem);
+      color:var(--primary);
+    }
+
+    h2{
+      font-size:clamp(1.6rem, 3vw, 2.4rem);
+      color:var(--primary);
+      margin-bottom:1rem;
+    }
+
+    h3{
+      font-size:1.1rem;
+      color:var(--primary);
+      margin-bottom:.65rem;
+    }
+
+    .lead{
+      font-size:1.08rem;
+      color:var(--muted);
+      max-width:62ch;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:.9rem;
+      flex-wrap:wrap;
+      margin-top:1.5rem;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:.55rem;
+      padding:.9rem 1.15rem;
+      border-radius:999px;
+      font-weight:600;
+      border:1px solid transparent;
+      transition:.2s ease;
+    }
+
+    .btn-primary{
+      background:var(--primary);
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+
+    .btn-primary:hover{background:var(--primary-2)}
+
+    .btn-secondary{
+      background:transparent;
+      border-color:var(--line);
+      color:var(--primary);
+    }
+
+    .btn-secondary:hover{
+      background:var(--surface);
+      border-color:rgba(47,86,96,.22);
+    }
+
+    .hero-card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:1.5rem;
+    }
+
+    .hero-card .quote{
+      font-size:1.05rem;
+      color:var(--text);
+      margin-bottom:1rem;
+    }
+
+    .mini-stats{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:.9rem;
+      margin-top:1.2rem;
+    }
+
+    .stat{
+      padding:1rem;
+      border-radius:var(--radius-sm);
+      background:var(--surface-2);
+      border:1px solid var(--line);
+    }
+
+    .stat strong{
+      display:block;
+      font-size:1.25rem;
+      color:var(--primary);
+    }
+
+    section{
+      padding:2rem 0;
+    }
+
+    .section-card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:2rem;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1.25rem;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1rem;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:1rem;
+    }
+
+    .card{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--radius-sm);
+      padding:1.2rem;
+    }
+
+    .soft{
+      background:var(--surface-2);
+    }
+
+    p{margin:.2rem 0 1rem}
+    ul{
+      margin:.5rem 0 0;
+      padding-left:1.1rem;
+      color:var(--muted);
+    }
+
+    li+li{margin-top:.45rem}
+    .muted{color:var(--muted)}
+    .section-intro{
+      max-width:72ch;
+      color:var(--muted);
+      margin-bottom:1.35rem;
+    }
+
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:.65rem;
+      margin-top:.7rem;
+    }
+
+    .pill{
+      padding:.55rem .8rem;
+      border-radius:999px;
+      background:var(--surface-2);
+      border:1px solid var(--line);
+      color:var(--primary);
+      font-size:.92rem;
+      font-weight:500;
+    }
+
+    .case-card{
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap:.8rem;
+    }
+
+    .case-card p:last-child{margin-bottom:0}
+
+    .tag{
+      display:inline-block;
+      font-size:.82rem;
+      color:var(--accent);
+      background:rgba(123,148,137,.12);
+      padding:.35rem .65rem;
+      border-radius:999px;
+      font-weight:700;
+      letter-spacing:.02em;
+    }
+
+    .focus-box{
+      border-left:4px solid var(--accent);
+      padding-left:1rem;
+      color:var(--muted);
+    }
+
+    .modal{
+      display:none;
+      position:fixed;
+      inset:0;
+      z-index:100;
+      align-items:center;
+      justify-content:center;
+      background:rgba(0,0,0,.5);
+      backdrop-filter:blur(4px);
+    }
+    .modal.active{display:flex}
+    .hidden{display:none}
+
+    .modal-content{
+      background:var(--surface);
+      padding:2.5rem;
+      border-radius:var(--radius);
+      text-align:center;
+      box-shadow:var(--shadow);
+      animation:modalIn .3s ease;
+      max-width:90%;
+    }
+    @keyframes modalIn{from{transform:scale(.9);opacity:0}}
+
+    .modal-icon{
+      width:60px;
+      height:60px;
+      background:rgba(123,148,137,.15);
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin:0 auto 1rem;
+      font-size:1.8rem;
+    }
+
+    .form-group{margin-bottom:1.1rem}
+    .form-group label{display:block;margin-bottom:.4rem;font-weight:600;color:var(--primary);font-size:.95rem}
+    .form-group input,.form-group textarea{width:100%;padding:.75rem 1rem;border:1px solid var(--line);border-radius:var(--radius-sm);font-size:1rem;font-family:inherit;transition:.2s}
+    .form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(47,86,96,.12)}
+    .form-group textarea{resize:vertical;min-height:100px}
+    .form-group .error{color:#c53030;font-size:.85rem;margin-top:.3rem;display:none}
+    .form-group.error input,.form-group.error textarea{border-color:#c53030}
+    .form-group.error .error{display:block}
+
+    .submit-btn{padding:.85rem 2rem;border-radius:999px;font-weight:600;background:var(--primary);color:#fff;border:none;cursor:pointer;transition:.2s}
+    .submit-btn:hover{background:var(--primary-2)}
+    .submit-btn:disabled{background:#ccc;cursor:not-allowed}
+
+    .close-modal{position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--muted)}
+
+    .cta{text-align:center;padding:2.5rem;background:linear-gradient(135deg, rgba(47,86,96,.95), rgba(60,110,120,.92));color:#fff;border-radius:var(--radius);box-shadow:var(--shadow)}
+
+    .cta p{color:rgba(255,255,255,.86);max-width:62ch;margin:0 auto 1.2rem}
+
+    footer{
+      padding:2rem 0 3rem;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .footer-line{
+      border-top:1px solid var(--line);
+      padding-top:1.25rem;
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width: 960px){
+      .hero-grid,
+      .two-col,
+      .grid-3,
+      .grid-2{
+        grid-template-columns:1fr;
+      }
+      .hero{padding-top:3rem}
+    }
+
+    @media (max-width: 640px){
+      .nav{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+      .nav-links{
+        gap:.4rem;
+      }
+      .section-card{
+        padding:1.35rem;
+      }
+      .mini-stats{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#inicio" class="brand">Mario Urbina · QA Portfolio</a>
+      <nav class="nav-links">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#especialidad">Especialidad</a>
+        <a href="#casos">Casos de éxito</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">QA Lead · Senior QA Consultant · Estrategia y ejecución</span>
+          <h1>Calidad de software con visión técnica, criterio de negocio y liderazgo real.</h1>
+          <p class="lead">
+            Soy Mario Urbina, profesional de QA con experiencia en proyectos web, mobile, APIs y servicios financieros.
+            He participado tanto en la ejecución como en la definición de estrategias de prueba y coordinación de equipos,
+            buscando que la calidad no sea una formalidad del proceso, sino una ventaja real para el proyecto.
+          </p>
+          <p class="lead">
+            Mi enfoque combina análisis de requerimientos, diseño de pruebas, seguimiento de defectos, validación funcional
+            y no funcional, pruebas de APIs, rendimiento y acompañamiento en salidas controladas o UAT.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#casos">Ver casos de éxito</a>
+            <a class="btn btn-secondary" href="#contacto">Hablar de una oportunidad</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <div class="quote">
+            “Trabajo la calidad como un proceso integral, no como una fase al final del proyecto.”
+          </div>
+          <p class="muted">
+            He trabajado con equipos manuales y automatizadores, validando desde flujos funcionales
+            hasta APIs, datos y escenarios de rendimiento, siempre con foco en claridad, cobertura y seguimiento útil.
+          </p>
+          <div class="mini-stats">
+            <div class="stat">
+              <strong>QA Lead</strong>
+              <span class="muted">Coordinación, seguimiento y estrategia</span>
+            </div>
+            <div class="stat">
+              <strong>APIs & Datos</strong>
+              <span class="muted">Validación técnica y consistencia</span>
+            </div>
+            <div class="stat">
+              <strong>JMeter</strong>
+              <span class="muted">Rendimiento con lectura práctica</span>
+            </div>
+            <div class="stat">
+              <strong>Stakeholders</strong>
+              <span class="muted">Comunicación clara y ejecutiva</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="sobre-mi">
+      <div class="container">
+        <div class="section-card">
+          <h2>Sobre mí</h2>
+          <p class="section-intro">
+            Me he desarrollado en QA trabajando con equipos de distintos perfiles, desde testers manuales hasta automatizadores,
+            participando en proyectos que exigen orden, criterio y capacidad de adaptación. Con el tiempo asumí funciones de mayor
+            liderazgo, no solo en la ejecución de pruebas, sino también en la planeación, priorización, seguimiento y comunicación con clientes y áreas involucradas.
+          </p>
+          <div class="two-col">
+            <div>
+              <p>
+                Algo que considero importante en mi forma de trabajar es que no me limito a ejecutar casos de prueba.
+                Me interesa entender el propósito de cada iniciativa, identificar puntos débiles desde etapas tempranas
+                y construir una estrategia que realmente aporte al proyecto.
+              </p>
+              <p>
+                He trabajado en iniciativas relacionadas con validaciones funcionales, pruebas de APIs, comparación de datos,
+                migraciones tecnológicas, pruebas de rendimiento y coordinación de esfuerzos de QA en contextos donde el control,
+                la trazabilidad y la claridad en el avance son indispensables.
+              </p>
+            </div>
+            <div class="card soft">
+              <h3>Cómo me gusta trabajar</h3>
+              <ul>
+                <li>Entender primero el negocio y el riesgo real antes de salir a probar por reflejo.</li>
+                <li>Traducir requerimientos ambiguos en escenarios claros y accionables.</li>
+                <li>Dar seguimiento con orden, no con ruido.</li>
+                <li>Comunicar hallazgos y riesgos de forma útil para equipos técnicos y stakeholders.</li>
+                <li>Dejar evidencia que sirva, no documentación de adorno.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="especialidad">
+      <div class="container">
+        <div class="section-card">
+          <h2>Áreas de especialidad</h2>
+          <p class="section-intro">
+            Mi perfil combina ejecución operativa con visión estratégica. Me interesa que QA no solo valide,
+            sino que también ayude a ordenar el proyecto, anticipar riesgos y dar visibilidad real sobre la calidad del producto.
+          </p>
+          <div class="grid-3">
+            <div class="card">
+              <h3>Estrategia y planeación de pruebas</h3>
+              <p class="muted">Definición de enfoques de prueba alineados a alcance, riesgos, tiempos y prioridades del negocio.</p>
+            </div>
+            <div class="card">
+              <h3>Análisis de requerimientos</h3>
+              <p class="muted">Revisión de historias, reglas y flujos para detectar huecos, ambigüedades y escenarios clave.</p>
+            </div>
+            <div class="card">
+              <h3>Coordinación y liderazgo de QA</h3>
+              <p class="muted">Seguimiento de equipos, priorización de esfuerzos y claridad sobre objetivos, cobertura y bloqueos.</p>
+            </div>
+            <div class="card">
+              <h3>Pruebas funcionales y regresión</h3>
+              <p class="muted">Validación de flujos críticos, procesos end-to-end e impactos colaterales entre módulos o plataformas.</p>
+            </div>
+            <div class="card">
+              <h3>APIs y validación de datos</h3>
+              <p class="muted">Pruebas de servicios, comparación de respuestas y revisión de consistencia entre componentes y entornos.</p>
+            </div>
+            <div class="card">
+              <h3>Rendimiento con JMeter</h3>
+              <p class="muted">Pruebas bajo carga con foco en tiempos de respuesta, estabilidad y lectura útil de hallazgos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="casos">
+      <div class="container">
+        <div class="section-card">
+          <h2>Casos de éxito</h2>
+          <p class="section-intro">
+            Estos ejemplos resumen el tipo de retos en los que he trabajado y la manera en que acostumbro aportar valor:
+            con criterio, estructura y una visión bastante aterrizada de lo que realmente necesita el proyecto.
+          </p>
+          <div class="grid-2">
+            <article class="card case-card">
+              <div>
+                <span class="tag">Migración tecnológica</span>
+                <h3>Validación de migración y consistencia de datos</h3>
+                <p>
+                  Participé en un proyecto enfocado en la migración de base de datos y validación de servicios entre componentes legacy y nuevos componentes en la nube.
+                  El reto no era solo validar que las respuestas “se vieran bien”, sino comprobar que la información siguiera siendo consistente y que las integraciones no introdujeran diferencias críticas.
+                </p>
+                <p class="muted">
+                  Mi aporte estuvo en revisar escenarios funcionales, apoyar en la comparación entre servicios, validar respuestas de APIs y contrastar información entre origen y destino,
+                  manteniendo el detalle técnico sin perder de vista el panorama general del proyecto.
+                </p>
+              </div>
+            </article>
+
+            <article class="card case-card">
+              <div>
+                <span class="tag">Cobertura y orden</span>
+                <h3>Proyectos con alto volumen de validaciones</h3>
+                <p>
+                  He trabajado en contextos donde el número de casos y la cantidad de APIs involucradas exigían una organización muy fina para evitar que la ejecución se volviera solo una carrera contra el tiempo.
+                </p>
+                <p class="muted">
+                  Además de ejecutar y dar seguimiento, ayudé a estructurar el trabajo priorizando escenarios, organizando cobertura
+                  y manteniendo visibilidad sobre avances, bloqueos y hallazgos. Cuando hay presión, la claridad vale oro.
+                </p>
+              </div>
+            </article>
+
+            <article class="card case-card">
+              <div>
+                <span class="tag">Web y mobile</span>
+                <h3>Validación integral en plataformas múltiples</h3>
+                <p>
+                  Trabajé en iniciativas donde la validación involucraba componentes web, Android y iOS. Uno de los principales retos fue asegurar consistencia funcional entre plataformas sin perder de vista sus particularidades.
+                </p>
+                <p class="muted">
+                  Mi participación incluyó análisis de flujos, diseño y ejecución de casos, seguimiento de incidencias
+                  y validación de comportamientos clave en distintos entornos, cuidando que la cobertura fuera real y no solo una casilla marcada.
+                </p>
+              </div>
+            </article>
+
+            <article class="card case-card">
+              <div>
+                <span class="tag">APIs y componentes</span>
+                <h3>Comparación de respuestas y comportamiento entre servicios</h3>
+                <p>
+                  En distintos proyectos he trabajado con pruebas orientadas a validar comportamiento entre servicios, revisar consistencia de respuestas
+                  e identificar diferencias entre componentes nuevos y anteriores.
+                </p>
+                <p class="muted">
+                  El valor aquí no está solo en comparar JSONs o revisar estatus 200. Está en entender si el servicio sigue respondiendo como debería dentro del contexto real del negocio.
+                </p>
+              </div>
+            </article>
+
+            <article class="card case-card">
+              <div>
+                <span class="tag">Rendimiento</span>
+                <h3>Pruebas con JMeter y lectura práctica de resultados</h3>
+                <p>
+                  He participado en ejercicios de rendimiento y estrés utilizando JMeter, buscando responder preguntas concretas:
+                  cómo se comporta el sistema, en qué punto empieza a degradarse y qué señales ayudan a entender el riesgo.
+                </p>
+                <p class="muted">
+                  Parte de mi trabajo ha sido configurar escenarios, interpretar resultados y comunicar hallazgos de forma útil para el equipo.
+                  Menos ruido, más lectura práctica.
+                </p>
+              </div>
+            </article>
+
+            <article class="card soft case-card">
+              <div>
+                <span class="tag">Valor agregado</span>
+                <h3>Lo que procuro dejar en cada proyecto</h3>
+                <div class="focus-box">
+                  <p>
+                    Más que solo ejecutar pruebas, busco dejar estructura, trazabilidad, claridad sobre riesgos y una forma de trabajo que ayude a tomar mejores decisiones.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso">
+      <div class="container">
+        <div class="section-card">
+          <h2>Cómo trabajo</h2>
+          <div class="two-col">
+            <div>
+              <p>
+                Mi forma de trabajar parte de algo muy simple: antes de probar, hay que entender qué se está construyendo,
+                qué riesgos tiene y qué tan crítico es lo que está en juego. A partir de eso, organizo el esfuerzo de QA buscando equilibrio entre cobertura, tiempo y valor para el proyecto.
+              </p>
+              <p>
+                Normalmente comienzo por revisar alcance, requerimientos, flujos y dependencias. Después, aterrizo la estrategia de prueba
+                y priorizo qué debe validarse primero. Durante la ejecución, doy seguimiento puntual a hallazgos, cobertura, bloqueos y cambios que puedan afectar el plan original.
+              </p>
+            </div>
+            <div class="card soft">
+              <h3>Mi enfoque en 5 pasos</h3>
+              <ul>
+                <li>Entender contexto, alcance y riesgos.</li>
+                <li>Definir estrategia y priorizar validaciones.</li>
+                <li>Diseñar escenarios útiles y con cobertura real.</li>
+                <li>Ejecutar con seguimiento claro de incidencias y bloqueos.</li>
+                <li>Comunicar avances y hallazgos de forma útil para decisión.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="herramientas">
+      <div class="container">
+        <div class="section-card">
+          <h2>Herramientas, metodologías y certificaciones</h2>
+          <div class="grid-2">
+            <div>
+              <h3>Herramientas</h3>
+              <div class="pill-row">
+                <span class="pill">JMeter</span>
+                <span class="pill">Postman</span>
+                <span class="pill">Jira</span>
+                <span class="pill">Xray</span>
+                <span class="pill">Zephyr</span>
+                <span class="pill">SQL</span>
+                <span class="pill">DBeaver</span>
+                <span class="pill">Cypress</span>
+              </div>
+              <h3 style="margin-top:1.25rem;">Metodologías y prácticas</h3>
+              <p class="muted">
+                Scrum, análisis de requerimientos, diseño de casos de prueba, pruebas funcionales, regresión, validación de APIs,
+                pruebas no funcionales, gestión de defectos, trazabilidad y reporting ejecutivo.
+              </p>
+            </div>
+            <div class="card soft">
+              <h3>Certificaciones</h3>
+              <ul>
+                <li>Professional Scrum Master I (PSM I)</li>
+                <li>PtU Certified Performance Tester with JMeter</li>
+                <li>Certified GenAI-Assisted Test Engineer</li>
+              </ul>
+              <p class="muted" style="margin-top:1rem;">
+                La combinación de estas certificaciones con experiencia operativa me permite moverme con comodidad entre estrategia, ejecución y mejora práctica del trabajo de QA.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="container">
+        <div class="section-card">
+          <h2>Servicios de QA</h2>
+          <p class="section-intro">
+            Este portafolio puede funcionar tanto para reclutamiento como para venta de servicios. Si el objetivo es apoyar a un equipo o proyecto,
+            estas son algunas de las formas en las que puedo aportar valor.
+          </p>
+          <div class="grid-3">
+            <div class="card">
+              <h3>Estrategia y plan de pruebas</h3>
+              <p class="muted">Definición de alcance, riesgos, prioridades, cobertura y enfoque de validación.</p>
+            </div>
+            <div class="card">
+              <h3>Diseño y ejecución funcional</h3>
+              <p class="muted">Construcción de escenarios, regresión, validación end-to-end y seguimiento de defectos.</p>
+            </div>
+            <div class="card">
+              <h3>Revisión de requerimientos</h3>
+              <p class="muted">Detección temprana de huecos, ambigüedades y riesgos antes de llegar a ejecución.</p>
+            </div>
+            <div class="card">
+              <h3>Validación de APIs y datos</h3>
+              <p class="muted">Pruebas de servicios, consistencia de respuestas y comparación entre componentes o entornos.</p>
+            </div>
+            <div class="card">
+              <h3>Pruebas de rendimiento</h3>
+              <p class="muted">Escenarios con JMeter para revisar tiempos de respuesta, estabilidad y comportamiento bajo carga.</p>
+            </div>
+            <div class="card">
+              <h3>Acompañamiento a UAT y reporting</h3>
+              <p class="muted">Seguimiento de hallazgos, visibilidad ejecutiva y apoyo en orden del proceso de QA.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="enfoque">
+      <div class="container">
+        <div class="section-card">
+          <h2>Dos formas de presentar este perfil</h2>
+          <div class="grid-2">
+            <div class="card">
+              <h3>Enfoque para reclutamiento</h3>
+              <p>
+                Ideal para posiciones de QA Lead, Senior QA, Test Lead o coordinación de calidad.
+                Aquí el mensaje principal es experiencia, liderazgo, criterio técnico, capacidad de análisis y comunicación con stakeholders.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Enfoque para venta de servicios</h3>
+              <p>
+                Ideal para consultoría o apoyo puntual a equipos. El mensaje se centra en los problemas que puedo ayudar a resolver:
+                ordenar el proceso de QA, validar mejor, detectar riesgos antes y dar claridad sobre la calidad real del entregable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="container">
+        <div class="cta">
+          <h2 style="color:#fff;">¿Buscas apoyo en QA o una posición de liderazgo en calidad?</h2>
+          <p>
+            Estoy abierto a oportunidades como QA Lead, Senior QA o consultoría especializada en aseguramiento de calidad,
+            especialmente en proyectos donde se valore tanto la ejecución como la estrategia, la comunicación y la capacidad de estructurar el trabajo con criterio.
+          </p>
+          <button class="btn btn-secondary" style="background:#fff;color:var(--primary);border-color:#fff;" onclick="abrirModal()">Contactar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal">
+    <button class="close-modal" onclick="cerrarModal()">&times;</button>
+    <div class="modal-content">
+      <form id="contactForm" novalidate>
+        <h2 style="margin-bottom:1.5rem;">Contáctame</h2>
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" maxlength="100" placeholder="Ej: Mario Urbina">
+          <span class="error">Solo se permiten letras, espacios y tildes</span>
+        </div>
+        <div class="form-group">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" maxlength="50" placeholder="Ej: correo@ejemplo.com">
+          <span class="error">Ingresa un correo válido</span>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" maxlength="300" placeholder="Escribe tu mensaje..."></textarea>
+          <span class="error">El mensaje no puede estar vacío</span>
+        </div>
+        <button type="submit" class="submit-btn" id="submitBtn">Enviar mensaje</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="modalExito">
+    <div class="modal-content">
+      <div class="modal-icon">✓</div>
+      <h3>¡Mensaje enviado!</h3>
+      <p class="muted">Gracias por ponerte en contacto, en breve me comunico contigo.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container footer-line">
+      <span>Mario Urbina · QA Lead / Senior QA Consultant</span>
+      <span>Portafolio profesional orientado a reclutamiento y servicios de QA</span>
+    </div>
+  </footer>
+  <script>
+    const modal = document.getElementById('modal');
+    const modalExito = document.getElementById('modalExito');
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const nombre = document.getElementById('nombre');
+    const correo = document.getElementById('correo');
+    const mensaje = document.getElementById('mensaje');
+
+    function abrirModal() { modal.classList.add('active'); }
+    function cerrarModal() { modal.classList.remove('active'); modalExito.classList.remove('active'); }
+
+    document.addEventListener('keydown', e => { if(e.key === 'Escape') cerrarModal(); });
+    modal.addEventListener('click', e => { if(e.target === modal || e.target === modalExito) cerrarModal(); });
+
+    function validarNombre(val) {
+      return /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]+$/.test(val);
+    }
+    function validarCorreo(val) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+    }
+
+    function validarCampo(campo, validador) {
+      const grupo = campo.parentElement;
+      if(!validador(campo.value.trim())) {
+        grupo.classList.add('error');
+        return false;
+      }
+      grupo.classList.remove('error');
+      return true;
+    }
+
+    [nombre, correo, mensaje].forEach(c => c.addEventListener('input', () => c.parentElement.classList.remove('error')));
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const valNom = validarCampo(nombre, validarNombre);
+      const valCorr = validarCampo(correo, validarCorreo);
+      const valMen = mensaje.value.trim().length > 0;
+
+      if(!valMen) { mensaje.parentElement.classList.add('error'); }
+      else { mensaje.parentElement.classList.remove('error'); }
+
+      if(!valNom || !valCorr || !valMen) return;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+
+      try {
+        const formData = new FormData();
+        formData.append('nombre', nombre.value);
+        formData.append('email', correo.value);
+        formData.append('message', mensaje.value);
+
+        await fetch('https://formspree.io/f/mvnoqzgb', { method: 'POST', body: formData, mode: 'no-cors' });
+
+        modal.classList.remove('active');
+        modalExito.classList.add('active');
+        form.reset();
+        setTimeout(() => { modalExito.classList.remove('active'); }, 3000);
+      } catch(err) {
+        modal.classList.remove('active');
+        modalExito.classList.add('active');
+        form.reset();
+        setTimeout(() => { modalExito.classList.remove('active'); }, 3000);
+      }
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Enviar mensaje';
+    });
+  </script>
+</body>
+</html>
